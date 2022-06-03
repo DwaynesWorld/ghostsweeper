@@ -1,0 +1,42 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Run Ghostsweeper CLI",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=ghostsweeper-cli",
+                    "--package=ghostsweeper-cli"
+                ],
+                "filter": {
+                    "name": "ghostsweeper-cli",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'ghostsweeper-cli'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=ghostsweeper-cli",
+                    "--package=ghostsweeper-cli"
+                ],
+                "filter": {
+                    "name": "ghostsweeper-cli",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

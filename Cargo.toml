@@ -1,0 +1,11 @@
+[package]
+name = "ghostsweeper"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ghostsweeper-engine = { path = "./ghostsweeper-engine" }
+
+[[bin]]
+name = "ghostsweeper-cli"
+path = "./ghostsweeper-cli/src/main.rs"
